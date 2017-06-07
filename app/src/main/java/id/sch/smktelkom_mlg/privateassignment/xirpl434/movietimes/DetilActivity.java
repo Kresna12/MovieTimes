@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 
 public class DetilActivity extends AppCompatActivity {
 
-    public String url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=1d82a5270c564eceaae327fd1d06aeb7";
+    public String url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=96d37398f7b846979bcb91e5f84dbc5c";
     String image, judul, oleh, gambar, detildeskripsi;
 
     @Override

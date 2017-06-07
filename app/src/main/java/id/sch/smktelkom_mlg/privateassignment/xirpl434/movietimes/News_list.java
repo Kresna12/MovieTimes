@@ -8,12 +8,10 @@ public class News_list implements Serializable {
     private String judul;
     private String popular;
 
-
     public News_list(String image, String judul, String popular) {
         this.image = image;
         this.judul = judul;
         this.popular = popular;
-
     }
 
     public String getImage() {
@@ -27,6 +25,5 @@ public class News_list implements Serializable {
     public String getPopular() {
         return popular;
     }
-
 
 }

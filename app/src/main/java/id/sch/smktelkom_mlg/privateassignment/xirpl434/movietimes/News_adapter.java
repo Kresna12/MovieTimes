@@ -1,8 +1,6 @@
 package id.sch.smktelkom_mlg.privateassignment.xirpl434.movietimes;
 
 import android.content.Context;
-import android.content.Intent;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +11,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
+
 
 
 public class News_adapter extends RecyclerView.Adapter<News_adapter.ViewHolder> {
@@ -34,27 +33,15 @@ public class News_adapter extends RecyclerView.Adapter<News_adapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final News_list news_list = news_lists.get(position);
+        News_list news_list = news_lists.get(position);
         holder.tvjudul.setText(news_list.getJudul());
         holder.tvpopular.setText(news_list.getPopular());
+
 
         Glide
                 .with(context)
                 .load(news_list.getImage())
                 .into(holder.ivimage);
-
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, DetilActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("image", news_list.getImage());
-                intent.putExtra("judul", news_list.getJudul());
-                intent.putExtra("oleh", news_list.getPopular());
-                context.startActivity(intent);
-
-            }
-        });
 
     }
 
@@ -70,14 +57,13 @@ public class News_adapter extends RecyclerView.Adapter<News_adapter.ViewHolder> 
         ImageView ivimage;
         TextView tvjudul;
         TextView tvpopular;
-        CardView cardView;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            cardView = (CardView) itemView.findViewById(R.id.cardview);
             ivimage = (ImageView) itemView.findViewById(R.id.imageView);
             tvjudul = (TextView) itemView.findViewById(R.id.textViewJudul);
             tvpopular = (TextView) itemView.findViewById(R.id.textViewPopular);
+
         }
     }
 }

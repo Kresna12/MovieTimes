@@ -28,7 +28,7 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class HomeNews extends Fragment {
-    private static final String URL_DATA = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=1d82a5270c564eceaae327fd1d06aeb7";
+    private static final String URL_DATA = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=96d37398f7b846979bcb91e5f84dbc5c";
     private List<News_list> news_lists;
     private RecyclerView recyclerView;
     private News_adapter adapter;
