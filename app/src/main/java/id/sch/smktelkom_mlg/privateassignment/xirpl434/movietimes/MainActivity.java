@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity
             fragment = new HomeNews();
             setTitle("News");
         } else if (id == R.id.nav_about) {
+            fragment = new AboutFragment();
+            setTitle("About");
 
         }
 
